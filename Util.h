@@ -14,8 +14,6 @@ namespace jin
         using std::endl;
         using std::cerr;
 
-        extern string netName1, netName2; // for transparent.cpp
-
         ///
         /// 读取文件fn的内容到buff中
         /// @return 0 成功； -1 fopen失败; -2 buff太小
@@ -38,8 +36,6 @@ namespace jin
         int SendAll(int connfd, const unsigned char *data, unsigned int data_num);
         int RecvAll(int connfd, unsigned char *data, unsigned int data_num);
 
-
-        void InitDBC();
         bool AllIterfaceGroOff();
         bool GetNetInterfaceName(string& netName1, string& netName2, const string& prefix);
 
